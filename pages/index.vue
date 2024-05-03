@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const config = useRuntimeConfig();
 const waiting = ref(false);
 const errors = ref(false);
 const success = ref(false);
@@ -12,16 +11,16 @@ const form = ref({
   message: "",
 });
 
-async function submit(form: any) {
-  this.waiting = true;
+async function submit(formData: any) {
+  waiting.value = true;
   await $fetch("/api/mail", {
     method: "POST",
-    body: form,
+    body: formData,
   }).then(() => {
-    this.errors = false;
-    this.success = true;
-    this.waiting = false;
-    this.form = {
+    errors.value = false;
+    success.value = true;
+    waiting.value = false;
+    form.value = {
       fullName: "",
       company: "",
       email: "",
