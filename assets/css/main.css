@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap');
+
+:root {
+  --backgroundColor: #fdfdfd;
+  --textColor: #525c68;
+  --lightTextColor: #797979;
+  --blueGradient: linear-gradient(90deg, #00c6ff, #0072ff);
+  --fontFamily: 'Lato', sans-serif;
+  --logoFontFamily: 'IBM Plex Mono', monospace;
+}
+
+* {
+  font-family: var(--fontFamily) !important;
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+#__nuxt {
+  width: auto;
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 30px;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
