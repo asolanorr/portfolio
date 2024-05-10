@@ -157,7 +157,7 @@ async function submit(formData: any) {
     <div class="contactContainer">
       <div class="left">
         <h1>Contact Me</h1>
-        <p>
+        <p class="hideOnMobile">
           Whether you have a project in mind, want to collaborate, or just want
           to say hello, I'm always open to hearing about new opportunities and
           doing some networking.
@@ -553,5 +553,177 @@ section {
 
 .formButton:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .homeContainer {
+    width: 100%;
+  }
+
+  .servicesContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+      "."
+      "."
+      "."
+      ".";
+  }
+
+  .aboutMeContainer .me {
+    display: none;
+  }
+
+  .aboutMeContainer .aboutMe {
+    width: 100%;
+  }
+
+  .contactContainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contactContainer .left {
+    width: 100% !important;
+    padding: 30px 0px;
+  }
+
+  .contactContainer .right {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .contactContainer .right form .row {
+    margin-bottom: 0;
+  }
+
+  .contactContainer .right form textarea {
+    margin: 0;
+  }
+
+  .contactContainer .right form .row .inputGroup:first-child {
+    width: 50%;
+    margin: 0px 30px 0 0;
+  }
+
+  .contactContainer .right form .row .inputGroup {
+    width: 50%;
+    margin: 0px 0px 0 0;
+  }
+
+  .formButton {
+    width: 100%;
+    max-width: 100%;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 14px 48px;
+    margin: 48px 0 28px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 0 10px;
+  }
+
+  .homeContainer h1 {
+    font-size: 1.5rem;
+  }
+
+  .homeContainer p {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+  }
+
+  .servicesContainer .service {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .servicesContainer .service span {
+    width: 60px;
+    height: 60px;
+  }
+
+  .servicesContainer .service span svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .servicesContainer .service .info h2 {
+    font-size: 1rem;
+  }
+
+  .servicesContainer .service .info p {
+    font-size: 0.8rem;
+  }
+
+  .aboutMeContainer .aboutMe h1 {
+    margin-bottom: 10px;
+  }
+
+  .aboutMeContainer .aboutMe p {
+    font-size: 0.8rem;
+    line-height: normal;
+  }
+
+  .contactContainer {
+    width: 100%;
+  }
+
+  .contactContainer h1 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+
+  .contactContainer p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .contactContainer .left a {
+    font-size: 0.8rem;
+  }
+
+  .contactContainer .right form label {
+    font-size: 0.8rem;
+    color: var(--lightTextColor);
+    margin: 5px 0;
+  }
+
+  .contactContainer .right form .row {
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .contactContainer .right form .row .inputGroup:first-child {
+    width: 100%;
+    margin: 0px 30px 0 0;
+  }
+
+  .contactContainer .right form .row .inputGroup {
+    width: 100%;
+    margin: 0px 30px 0 0;
+  }
+
+  .formButton {
+    width: 100%;
+    max-width: 100%;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 14px 48px;
+    margin-top: 10px;
+  }
+
+  .hideOnMobile {
+    display: none;
+  }
+
+  .littleFooter[data-v-02281a80] {
+    bottom: 15px;
+  }
 }
 </style>

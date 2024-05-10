@@ -1,14 +1,30 @@
 <script setup lang="ts">
-    const { getPagePosition } = useUtils()
-    const currentSection = getPagePosition()
+const { getPagePosition } = useUtils();
+const currentSection = getPagePosition();
 </script>
 
 <template>
   <div class="pagerContainer" ref="el">
-    <a class="dot" to="#home" :class="{ 'selected': (currentSection === 'home') }"></a>
-    <a class="dot" to="#services" :class="{ 'selected': (currentSection === 'services') }"></a>
-    <a class="dot" to="#aboutme" :class="{ 'selected': (currentSection === 'aboutme') }"></a>
-    <a class="dot" to="#contact" :class="{ 'selected': (currentSection === 'contact') }"></a>
+    <a
+      class="dot"
+      href="#home"
+      :class="{ selected: currentSection === 'home' }"
+    ></a>
+    <a
+      class="dot"
+      href="#services"
+      :class="{ selected: currentSection === 'services' }"
+    ></a>
+    <a
+      class="dot"
+      href="#aboutme"
+      :class="{ selected: currentSection === 'aboutme' }"
+    ></a>
+    <a
+      class="dot"
+      href="#contact"
+      :class="{ selected: currentSection === 'contact' }"
+    ></a>
   </div>
 </template>
 
@@ -41,5 +57,11 @@
   width: 15px;
   height: 15px;
   background: var(--blueGradient);
+}
+
+@media screen and (max-width: 768px) {
+  .pagerContainer {
+    display: none;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-    const { getPagePosition } = useUtils()
-    const currentSection = getPagePosition()
+const { getPagePosition } = useUtils();
+const currentSection = getPagePosition();
 </script>
 
 <template>
@@ -10,10 +10,24 @@
         <nav>
           <IconsNextConcept />
           <div class="links">
-            <a href="#home" :class="{ 'selected': (currentSection === 'home') }">HOME</a>
-            <a href="#services" :class="{ 'selected': (currentSection === 'services') }">SERVICES</a>
-            <a href="#aboutme" :class="{ 'selected': (currentSection === 'aboutme') }">ABOUT ME</a>
-            <a href="#contact" :class="{ 'selected': (currentSection === 'contact') }">CONTACT</a>
+            <a href="#home" :class="{ selected: currentSection === 'home' }"
+              >HOME</a
+            >
+            <a
+              href="#services"
+              :class="{ selected: currentSection === 'services' }"
+              >SERVICES</a
+            >
+            <a
+              href="#aboutme"
+              :class="{ selected: currentSection === 'aboutme' }"
+              >ABOUT ME</a
+            >
+            <a
+              href="#contact"
+              :class="{ selected: currentSection === 'contact' }"
+              >CONTACT</a
+            >
           </div>
           <CommonButton title="Let's talk" />
         </nav>
@@ -21,7 +35,7 @@
 
       <PagerComponent />
 
-      <div class="FloatingIconComponentsContainer">
+      <div class="floatingIconComponentsContainer">
         <FloatingIconComponent
           link="https://www.linkedin.com/in/asolanor/"
           anchorTitle="Go to LinkedIn"
@@ -85,7 +99,7 @@ nav .links .selected {
   -webkit-text-fill-color: transparent;
 }
 
-.FloatingIconComponentsContainer {
+.floatingIconComponentsContainer {
   position: absolute;
   top: -30px;
   display: flex;
@@ -93,5 +107,27 @@ nav .links .selected {
   justify-content: flex-end;
   height: 100vh;
   margin: 0 30px;
+}
+
+@media screen and (max-width: 768px) {
+  nav .links {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .stickyContainer {
+    width: calc(100% - 20px);
+  }
+
+  .floatingIconComponentsContainer {
+    top: 0px;
+    left: 15px;
+    margin: 0;
+  }
+
+  nav {
+    height: 35px;
+  }
 }
 </style>

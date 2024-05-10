@@ -30,4 +30,10 @@ const props = defineProps({
 .circle:hover {
   background: #d4d4d4;
 }
+
+@media (max-width: 480px) {
+  .circle {
+    display: none;
+  }
+}
 </style>

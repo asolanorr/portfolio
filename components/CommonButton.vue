@@ -34,4 +34,10 @@ a:hover {
   padding: 14px 48px;
   margin-top: 48px;
 }
+
+@media (max-width: 480px) {
+  .cta {
+    margin-top: 10px;
+}
+}
 </style>
