@@ -1,4 +1,11 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Next Concept: Elevating Digital Experiences with Innovative Software Solutions',
+  ogTitle: 'Next Concept: Elevating Digital Experiences with Innovative Software Solutions',
+  description: 'Welcome to Next Concept, where our team bring your digital visions to life! Explore our portfolio of cutting-edge software development, seamless UI/UX design, and transformative mobile app development services. Let us craft the perfect digital solution for your needs.',
+  ogDescription: 'Welcome to Next Concept, where our team bring your digital visions to life! Explore our portfolio of cutting-edge software development, seamless UI/UX design, and transformative mobile app development services. Let us craft the perfect digital solution for your needs.',
+})
+
 const { getPagePosition } = useUtils();
 const currentSection = getPagePosition();
 </script>
