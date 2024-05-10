@@ -113,6 +113,12 @@ nav .links .selected {
   nav .links {
     display: none;
   }
+
+  .floatingIconComponentsContainer {
+    top: -10px;
+    left: 10px;
+    margin: 0;
+}
 }
 
 @media (max-width: 480px) {
