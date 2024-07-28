@@ -145,7 +145,7 @@ async function submit(formData: any) {
 
       <div class="me">
         <img
-          src="https://res.cloudinary.com/xluwi/image/upload/v1712428512/IMG_0511_mvzfo3.jpg"
+          src="https://res.cloudinary.com/xluwi/image/upload/v1722137432/B632B07E-2C50-4596-A0AD-959B3D8FAFC6_wsu1zp.jpg"
           alt="Alejandro Solano"
         />
       </div>
